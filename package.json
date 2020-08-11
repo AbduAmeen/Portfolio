@@ -9,7 +9,15 @@
   },
   "dependencies": {
     "next": "9.3.5",
+    "node-sass": "^4.14.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-feather": "^2.0.8",
+    "typescript": "^3.9.7"
+  },
+  "devDependencies": {
+    "@types/feather-icons": "^4.7.0",
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.44"
   }
 }

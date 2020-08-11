@@ -1,0 +1,138 @@
+$color1: #efefef;
+$color2: #e4e4e4;
+$color3: #c4c4c4;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+text.title {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+text.subtitle {
+  font-size: 18px;
+}
+
+text.body {
+  font-size: 14px;
+}
+div.landingpage {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  border: 1px solid black;
+  align-items: stretch;
+}
+
+div.nav {
+  ul {
+    li {
+      padding-left: 2em;
+      padding-right: 2em;
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+    }
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    list-style-type: none;
+  }
+}
+
+div.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  margin-top: 4em;
+  margin-bottom: 8.2em;
+}
+
+%div.rect {
+  margin: 0;
+  height: 100px;
+  width: 100%;
+}
+
+div.straightrects {
+  .rect1 {
+    @extend %div.rect;
+    background-color: $color1;
+  }
+  .rect2 {
+    @extend %div.rect;
+    background-color: $color2;
+  }
+  .rect3 {
+    @extend %div.rect;
+    background-color: $color3;
+  }
+}
+
+div.rotatedrects {
+  transform: rotate(45deg);
+  position: absolute;
+  left: -375px;
+  top: 500px;
+  width: 900px;
+  //   height: 300px;
+  .rect1 {
+    @extend %div.rect;
+    background-color: $color1;
+  }
+  .rect2 {
+    @extend %div.rect;
+    background-color: $color2;
+  }
+  .rect3 {
+    @extend %div.rect;
+    background-color: $color3;
+  }
+}
+
+div.projectscreen {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+div.projects {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9em;
+  margin: 1em;
+}
+
+div.contact {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+input.single {
+  width: 500px;
+}
+
+textarea {
+  width: 500px;
+  border-radius: 5px;
+}
