@@ -1,5 +1,6 @@
+const prod = process.env.NODE_ENV === "production";
 module.exports = {
-  assetPrefix: "/Portfolio/",
-  basePath: "/Portfolio",
+  assetPrefix: prod ? "/Portfolio/" : "",
+  basePath: prod ? "/Portfolio" : "",
   //   exportTrailingSlash: true,
 };

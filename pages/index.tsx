@@ -39,7 +39,7 @@ const Index: React.FunctionComponent = () => (
         <div className="rect color2" />
         <div className="rect color3" />
         <img
-          src={"/rotatedrects.svg"}
+          src={"rotatedrects.svg"}
           alt="rotatedrects"
           className="rotatedrects"
         />
