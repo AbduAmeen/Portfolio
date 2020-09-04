@@ -10,11 +10,7 @@
 
 # next.js
 /.next/
-<<<<<<< HEAD
 # /out/
-=======
-/out/
->>>>>>> parent of b8c0ba5... init out subtree commit
 
 # production
 /build
