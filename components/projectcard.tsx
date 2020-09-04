@@ -15,7 +15,7 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
 }: ProjectCardProps) => {
   return (
     <>
-      <Card variant="outlined">
+      <Card>
         <ButtonBase
           style={{ display: "block", textAlign: "initial" }}
           onClick={(event) => {

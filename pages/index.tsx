@@ -4,6 +4,12 @@ import { TextField } from "@material-ui/core";
 
 const Index: React.FunctionComponent = () => (
   <>
+    <Head>
+      <link
+        href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro&display=swap"
+        rel="stylesheet"
+      />
+    </Head>
     <div className="landingpage">
       <div className="nav">
         <ul>
