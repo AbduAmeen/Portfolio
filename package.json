@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+<<<<<<< HEAD
     "build": "next build && next export",
+=======
+    "build": "next build",
+>>>>>>> parent of b8c0ba5... init out subtree commit
     "start": "next start"
   },
   "dependencies": {
