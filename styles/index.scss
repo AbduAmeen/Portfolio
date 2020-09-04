@@ -2,14 +2,33 @@ $color1: #efefef;
 $color2: #e4e4e4;
 $color3: #c4c4c4;
 
+html,
 body {
+  font-size: 16px;
   margin: 0;
   padding: 0;
+  height: 100%;
+}
+
+* {
+  box-sizing: content-box;
+}
+
+img {
+  position: absolute;
+  max-width: 100%;
+}
+/*===========
+  Topography
+  ===========*/
+
+text.headingfour {
+  font-weight: bold;
+  font-size: 28px;
 }
 
 text.title {
-  font-weight: bold;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 text.subtitle {
@@ -19,15 +38,21 @@ text.subtitle {
 text.body {
   font-size: 14px;
 }
+
 div.landingpage {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   position: relative;
+  justify-content: space-between;
   height: 100vh;
-  border: 1px solid black;
-  align-items: stretch;
+  width: 100vw;
+  max-width: 100%;
+  // margin: 1.5em 0em;
 }
 
 div.nav {
+  width: 100%;
   ul {
     li {
       padding-left: 2em;
@@ -52,87 +77,125 @@ div.main {
   padding-top: 5em;
   padding-bottom: 5em;
   margin-top: 4em;
+
   margin-bottom: 8.2em;
+  text {
+    padding: 0 1em;
+  }
 }
 
-%div.rect {
-  margin: 0;
+div.rects {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+div.rect {
+  max-height: 100px;
   height: 100px;
   width: 100%;
 }
+div.color1 {
+  background: $color1;
+}
 
-div.straightrects {
-  .rect1 {
-    @extend %div.rect;
-    background-color: $color1;
+div.color2 {
+  background: $color2;
+}
+
+div.color3 {
+  background: $color3;
+}
+img.rotatedrects {
+  align-self: end;
+  height: 624px;
+  left: 0;
+  bottom: 0;
+}
+@media (max-width: 992px) and (min-width: 801px) {
+  div.rect {
+    height: 75px;
   }
-  .rect2 {
-    @extend %div.rect;
-    background-color: $color2;
-  }
-  .rect3 {
-    @extend %div.rect;
-    background-color: $color3;
+  img.rotatedrects {
+    height: 464px;
   }
 }
 
-div.rotatedrects {
-  transform: rotate(45deg);
-  position: absolute;
-  left: -375px;
-  top: 500px;
-  width: 900px;
-  //   height: 300px;
-  .rect1 {
-    @extend %div.rect;
-    background-color: $color1;
+@media (max-width: 800px) {
+  div.rect {
+    height: 50px;
   }
-  .rect2 {
-    @extend %div.rect;
-    background-color: $color2;
-  }
-  .rect3 {
-    @extend %div.rect;
-    background-color: $color3;
+  img.rotatedrects {
+    display: none;
+    left: 0;
+    bottom: 0;
   }
 }
-
 div.projectscreen {
   position: relative;
   overflow: hidden;
-  margin: 0;
   display: flex;
-  height: 100vh;
-  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-evenly;
   align-items: center;
+  margin-top: 1.5em;
 }
 
 div.projects {
   position: relative;
   display: grid;
-  grid-template-columns: auto auto;
-  justify-content: center;
-  align-items: center;
-  padding: 0.9em;
-  margin: 1em;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+  margin: 2em;
+  max-width: 1024px;
+}
+
+@media (max-width: 992px) {
+  div.projectscreen {
+    height: 100%;
+    margin-top: 36px;
+  }
+
+  div.projects {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
 }
 
 div.contact {
+  margin: 1em 0em;
+  margin-bottom: 2.5em;
   position: relative;
   overflow: hidden;
-  margin: 0;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  border: 1px solid black;
-}
-input.single {
-  width: 500px;
+  width: 100%;
+  height: 100%;
 }
 
-textarea {
-  width: 500px;
-  border-radius: 5px;
+div.input {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  width: 90%;
+  max-width: 500px;
+}
+
+label.inputlabel {
+  text-align: left;
+  margin: 100em;
+}
+
+div.single {
+  padding: 0px;
+  margin-top: 1.5em;
+}
+
+img.caret {
+  width: 256px;
+  left: 1430px;
+  top: 1400px;
 }

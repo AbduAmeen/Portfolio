@@ -1,3 +1,15 @@
+* {
+  box-sizing: content-box;
+}
+
+// .projectrect {
+//   display: flex;
+//   width: 100%;
+//   max-width: 500px;
+//   border: 1px #e0e0e0 solid;
+//   border-radius: 10px;
+// }
+
 text.subtitle1 {
   font-size: 14px;
   font-weight: bold;
@@ -20,12 +32,10 @@ div.projectrect {
   border-radius: 5px;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin: 1em;
-  border: 1px solid black;
+  margin: 0;
   height: 150px;
-  width: 400px;
   padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding-right: 1em;
   padding-top: 1.5em;
   padding-bottom: 0.8em;
 }
@@ -33,7 +43,6 @@ div.projectrect {
 div.arrow {
   position: relative;
   text-align: center;
-  padding: 12px;
+  padding: 0.3em;
   // border: 1px solid black;
-  top: -18px;
 }
