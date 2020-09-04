@@ -1,5 +1,5 @@
 module.exports = {
-  assetPrefix: "/Portfolio",
+  assetPrefix: "/Portfolio/",
   basePath: "/Portfolio",
-  exportTrailingSlash: true,
+  //   exportTrailingSlash: true,
 };
