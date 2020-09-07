@@ -1,0 +1,21 @@
+div.skillcard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 5px;
+  align-items: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  // max-height: 276px;
+  box-shadow: 3px 4px 10px rgba(64, 64, 64, 0.2);
+}
+
+div.img {
+  height: fit-content;
+  margin: 1em;
+}
+
+div.content {
+  margin: 0em 4em;
+  margin-bottom: 1em;
+}

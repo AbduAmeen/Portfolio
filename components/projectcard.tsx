@@ -1,6 +1,6 @@
 import React from "react";
 import { ChevronRight } from "react-feather";
-import { Card, CardContent, makeStyles, ButtonBase } from "@material-ui/core";
+import styles from "../styles/projectcard.module.scss";
 
 interface ProjectCardProps {
   title: string;
@@ -15,31 +15,27 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
 }: ProjectCardProps) => {
   return (
     <>
-      <Card>
-        <ButtonBase
-          style={{ display: "block", textAlign: "initial" }}
-          onClick={(event) => {
-            window.location.href = url;
+      <div
+        className={styles.projectrect}
+        onClick={(event) => {
+          window.location.href = url;
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            // alignItems: "center",
+            // justifyContent: "space-between",
           }}
         >
-          <CardContent>
-            <text className="subtitle1">{title}</text>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                // justifyContent: "center",
-              }}
-            >
-              <p className="subtitle2">{content}</p>
-              <div className="arrow">
-                <ChevronRight />
-              </div>
-            </div>
-          </CardContent>
-        </ButtonBase>
-      </Card>
+          <text className="st bold">{title}</text>
+          <p>{content}</p>
+        </div>
+        <div className={styles.arrow}>
+          <ChevronRight />
+        </div>
+      </div>
     </>
   );
 };

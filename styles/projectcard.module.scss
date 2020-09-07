@@ -1,0 +1,24 @@
+// text.subtitle1 {
+//   font-size: 18px;
+//   font-weight: bold;
+// }
+.projectrect {
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0;
+  max-height: 150px;
+  padding: 2em;
+  box-shadow: 3px 4px 10px rgba(64, 64, 64, 0.2);
+}
+
+div.arrow {
+  margin: 0px 0px 0px 16px;
+  display: flex;
+  align-items: center;
+  // top: -12px;
+  // margin-left: auto;
+  // border: 1px solid black;
+}
