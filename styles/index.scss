@@ -1,6 +1,7 @@
 $color1: #efefef;
 $color2: #e4e4e4;
 $color3: #c4c4c4;
+$navheight: 79px;
 
 html,
 body {
@@ -9,6 +10,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100%;
 }
 
 * {
@@ -69,24 +71,38 @@ caption {
 }
 
 div.nav {
-  // width: 100%;
+  width: 100%;
+  height: $navheight;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  // padding: 0 72px;
-  margin: 0 3em;
+  margin: auto;
   text-align: center;
-  ul {
-    li {
-      padding-left: 2em;
-      padding-right: 2em;
-      padding-top: 1.5em;
-      padding-bottom: 1.5em;
-    }
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    list-style-type: none;
+  z-index: 1;
+}
+
+div.hambutton {
+  display: none;
+  margin: 1em;
+}
+
+div.navbuttons {
+  flex-direction: row;
+  display: flex;
+  a {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    color: inherit;
+    text-decoration: 0;
+    width: max-content;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  a.active {
+    text-decoration: underline;
   }
 }
 
@@ -99,6 +115,30 @@ div.main {
   margin: auto;
 }
 
+@media (max-width: 992px) {
+  div.nav {
+    flex-direction: column;
+    position: fixed;
+    background: white;
+  }
+  div.hambutton {
+    display: initial;
+  }
+  div.navbuttons {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    a {
+      border-top-width: 1px;
+      border-bottom-width: 1px;
+      border-color: grey;
+    }
+  }
+
+  div.main {
+    padding-top: $navheight;
+  }
+}
 div.landingpage {
   width: 100%;
   display: flex;
@@ -111,56 +151,22 @@ div.mainimg {
   display: flex;
   flex-direction: column;
   margin-top: 2.5em;
+  img {
+    max-height: 550px;
+    width: 100%;
+  }
   // margin: 0 3em;
 }
 
-// div.rects {
-//   position: relative;
-//   display: flex;
-//   flex-direction: column;
-// }
+@media (max-width: 992px) {
+  div.landingpage {
+    flex-direction: column;
+    text.h1 {
+      font-size: 36px;
+    }
+  }
+}
 
-// div.rect {
-//   max-height: 100px;
-//   height: 100px;
-//   width: 100%;
-// }
-// div.color1 {
-//   background: $color1;
-// }
-
-// div.color2 {
-//   background: $color2;
-// }
-
-// div.color3 {
-//   background: $color3;
-// }
-// img.rotatedrects {
-//   align-self: end;
-//   height: 624px;
-//   left: 0;
-//   bottom: 0;
-// }
-// @media (max-width: 992px) and (min-width: 801px) {
-//   div.rect {
-//     height: 75px;
-//   }
-//   img.rotatedrects {
-//     height: 464px;
-//   }
-// }
-
-// @media (max-width: 800px) {
-//   div.rect {
-//     height: 50px;
-//   }
-//   img.rotatedrects {
-//     display: none;
-//     left: 0;
-//     bottom: 0;
-//   }
-// }
 div.whoiam {
   display: flex;
   flex-direction: row;
@@ -174,11 +180,17 @@ div.whoiam {
     width: auto;
     margin-right: auto;
   }
-  text.content {
+  p.content {
     justify-self: center;
     align-self: center;
     margin-right: auto;
-    width: 543px;
+    max-width: 543px;
+  }
+}
+
+@media (max-width: 992px) {
+  div.whoiam {
+    flex-direction: column;
   }
 }
 
@@ -217,7 +229,7 @@ div.projects {
   // grid-gap: 32px;
   grid-row-gap: 32px;
   grid-column-gap: 64px;
-  margin: 2em;
+  margin: 2em 0;
   max-width: 1146px;
 }
 
@@ -246,6 +258,24 @@ div.emailbox {
   width: 95%;
 }
 
+@media (max-width: 450px) {
+  div.emailbox {
+    text.email {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  div.emailbox {
+    text.email {
+      font-size: 20px;
+    }
+    text.st {
+      font-size: 16px;
+    }
+  }
+}
 // label.inputlabel {
 //   text-align: left;
 //   margin: 100em;

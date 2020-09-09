@@ -2,23 +2,49 @@
 //   font-size: 18px;
 //   font-weight: bold;
 // }
+
 .projectrect {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   border-radius: 5px;
   text-overflow: ellipsis;
   overflow: hidden;
   margin: 0;
-  max-height: 150px;
   padding: 2em;
   box-shadow: 3px 4px 10px rgba(64, 64, 64, 0.2);
+  border: 1px solid #ebebeb;
 }
 
-div.arrow {
-  margin: 0px 0px 0px 16px;
+.projectrect div.button {
   display: flex;
   align-items: center;
+  width: fit-content;
   // top: -12px;
   // margin-left: auto;
   // border: 1px solid black;
+  // border: 1px solid red;
+  border-radius: 5px;
+
+  a {
+    // padding: 0.8em 1.5em;
+    text-decoration: inherit;
+    color: #0366d6;
+    background: inherit;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 }
+
+@media (max-width: 500px) {
+  .projectrect {
+    padding: 1.5em;
+    // font-size: 0.8em;
+  }
+}
+
+// @media (max-width: 400px) {
+//   .projectrect {
+//     padding: 1em;
+//   }
+// }

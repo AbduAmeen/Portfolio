@@ -15,12 +15,7 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
 }: ProjectCardProps) => {
   return (
     <>
-      <div
-        className={styles.projectrect}
-        onClick={(event) => {
-          window.location.href = url;
-        }}
-      >
+      <div className={styles.projectrect}>
         <div
           style={{
             display: "flex",
@@ -32,8 +27,8 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
           <text className="st bold">{title}</text>
           <p>{content}</p>
         </div>
-        <div className={styles.arrow}>
-          <ChevronRight />
+        <div className={styles.button}>
+          <a href={url}>Github</a>
         </div>
       </div>
     </>
