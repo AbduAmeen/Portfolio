@@ -64,6 +64,10 @@ caption {
   Templates
   ===========*/
 
+.visible {
+  display: none;
+}
+
 %div.section {
   margin: 2em 0;
   display: flex;
@@ -104,9 +108,6 @@ div.navbuttons {
   a.active {
     text-decoration: underline;
   }
-}
-
-div.content {
 }
 
 div.main {
