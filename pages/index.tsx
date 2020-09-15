@@ -123,7 +123,7 @@ const Index: React.FunctionComponent = () => {
                     width="16px"
                     style={{ marginRight: "0.3em" }}
                   />
-                  {"Resume"}
+                  Resume
                 </a>
                 <a
                   className="caption linkedin"
