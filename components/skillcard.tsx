@@ -17,11 +17,7 @@ const SkillCard: React.FunctionComponent<SkillCardProps> = ({
           <img src={imgsrc} height="128px"></img>
         </div>
         <div className={styles.content}>
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s,
-          </p>
+          <p>{content}</p>
         </div>
       </div>
     </>

@@ -4,14 +4,16 @@ import styles from "../styles/projectcard.module.scss";
 
 interface ProjectCardProps {
   title: string;
-  content: string;
+  content: string | any;
   url: string;
+  urltitle: string;
 }
 
 const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
   title,
   content,
   url,
+  urltitle,
 }: ProjectCardProps) => {
   return (
     <>
@@ -28,7 +30,7 @@ const ProjectCard: React.FunctionComponent<ProjectCardProps> = ({
           <p>{content}</p>
         </div>
         <div className={styles.button}>
-          <a href={url}>Github</a>
+          <a href={url}>{urltitle}</a>
         </div>
       </div>
     </>
