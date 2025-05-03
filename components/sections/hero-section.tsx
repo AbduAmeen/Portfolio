@@ -50,7 +50,7 @@ export default function HeroSection() {
           <div className="relative">
             <div className="relative z-10 lg:ml-10">
               <Image
-                src="/pfp.jpeg?height=600&width=600"
+                src="/Portfolio/pfp.jpeg?height=600&width=600"
                 alt="Developer Workspace"
                 width={600}
                 height={600}
