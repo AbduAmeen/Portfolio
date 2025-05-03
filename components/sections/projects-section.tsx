@@ -13,20 +13,20 @@ export default function ProjectsSection() {
       description:
         "Made contributions to the password manager within the Chrome browser.",
       skills: ["C++"],
-      link: "#",
+      link: "https://chromium.googlesource.com/chromium/src/+/HEAD/AUTHORS#23",
     },
     {
       title: "Newpipe",
       description: "An alternative frontend for various streaming sites.",
       skills: ["Java", "Android"],
-      link: "#",
+      link: "https://github.com/TeamNewPipe/NewPipe/issues/1974",
     },
     {
       title: "AI Email Spam Checker",
       description:
         "Email spam checker which takes an email and runs it against an AI model to determine whether the email is spam or not spam (ham).",
       skills: ["Python"],
-      link: "#",
+      link: "https://github.com/AbduAmeen/C946/tree/main",
     },
   ];
 

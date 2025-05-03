@@ -10,14 +10,14 @@ export default function ExperienceSection() {
         {
           title: "Software Development Engineer 2",
           description:
-            "Currently working as an SDE 2 at Amazon, focusing on backend development and cloud infrastructure.",
-          skills: [],
+            "Currently working as an SDE 2 at Amazon, focusing on backend development and cloud infrastructure. Building ETL pipelines for geographic data.",
+          skills: ["Kotlin", "Java", "Spring", "AWS", "Python", "TypeScript"],
         },
         {
           title: "Software Development Engineer",
           description:
             "Worked on the implementation of Protected Audience API (Cookie-less tracking) in Chrome browsers for all Amazon shoppers. This project was built using Kotlin and a Spring based internal framework. The application was deployed on the AWS cloud. Developed the Universal Targeting API for managing targeting settings for advertisers. This project was built using Java and an internal framework built on Spring. The application was deployed on the AWS cloud.",
-          skills: ["Kotlin", "Java", "Spring", "AWS"],
+          skills: ["Kotlin", "Java", "Spring", "AWS", "TypeScript"],
         },
       ],
     },

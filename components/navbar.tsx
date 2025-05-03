@@ -58,8 +58,11 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden md:block">
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8">
-              GET STARTED
+            <Button
+              className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8"
+              asChild
+            >
+              <a href="#contact">GET STARTED</a>
             </Button>
           </div>
 
@@ -87,8 +90,12 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 mt-4">
-              GET STARTED
+            <Button
+              className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 mt-4"
+              onClick={() => setIsOpen(false)}
+              asChild
+            >
+              <a href="#contact">GET STARTED</a>
             </Button>
           </nav>
         </div>

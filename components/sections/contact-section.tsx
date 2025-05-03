@@ -16,11 +16,6 @@ export default function ContactSection() {
       value: "abdu.ameen000@gmail.com",
     },
     {
-      icon: <Phone size={24} className="text-blue-400" />,
-      title: "Phone",
-      value: "(661) 437-0598",
-    },
-    {
       icon: <MapPin size={24} className="text-blue-400" />,
       title: "Location",
       value: "Denver, CO",

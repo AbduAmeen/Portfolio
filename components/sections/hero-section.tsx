@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin } from "lucide-react";
@@ -20,14 +22,18 @@ export default function HeroSection() {
               contributing to open-source projects.
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8">
-                View Projects
+              <Button
+                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8"
+                asChild
+              >
+                <a href="#projects">View Projects</a>
               </Button>
               <Button
                 variant="outline"
                 className="border-blue-600 text-blue-400 hover:bg-blue-900/20 rounded-full px-8"
+                asChild
               >
-                Contact Me
+                <a href="#contact">Contact Me</a>
               </Button>
             </div>
             <div className="flex flex-wrap gap-6 text-gray-400">
