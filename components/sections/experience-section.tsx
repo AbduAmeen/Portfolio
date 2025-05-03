@@ -1,4 +1,5 @@
-import ExperienceItem from "@/components/experience-item"
+import ExperienceItem from "@/components/experience-item";
+import { Section, SectionCategoryText, SectionTitle } from "../ui/section";
 
 export default function ExperienceSection() {
   const experiences = [
@@ -38,18 +39,19 @@ export default function ExperienceSection() {
       positions: [
         {
           title: "SDE Intern",
-          description: "Built a leaderboard for an internal game that connected to their oauth2 system.",
+          description:
+            "Built a leaderboard for an internal game that connected to their oauth2 system.",
           skills: ["OAuth2"],
         },
       ],
     },
-  ]
+  ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#060c24]">
+    <Section id="experience">
       <div className="max-w-7xl mx-auto">
-        <div className="text-blue-400 font-medium mb-4">WORK EXPERIENCE</div>
-        <h2 className="text-4xl font-bold mb-12">WHERE I'VE WORKED</h2>
+        <SectionCategoryText>WORK EXPERIENCE</SectionCategoryText>
+        <SectionTitle>WHERE I'VE WORKED</SectionTitle>
 
         <div className="space-y-12">
           {experiences.map((experience, index) => (
@@ -62,6 +64,6 @@ export default function ExperienceSection() {
           ))}
         </div>
       </div>
-    </section>
-  )
+    </Section>
+  );
 }

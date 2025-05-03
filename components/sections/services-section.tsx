@@ -1,6 +1,12 @@
 import { Code, Server, Database } from "lucide-react";
 import ServiceCard from "@/components/service-card";
-import { SectionSubtitleText } from "../ui/section";
+import {
+  Section,
+  SectionCategoryText,
+  SectionContent,
+  SectionSubtitleText,
+  SectionTitle,
+} from "../ui/section";
 export default function ServicesSection() {
   const services = [
     {
@@ -24,9 +30,9 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <Section className="relative" id="services">
       <div className="max-w-7xl mx-auto text-center mb-16">
-        <div className="text-blue-400 font-medium mb-4">WHAT I DO</div>
+        <SectionCategoryText>WHAT I DO</SectionCategoryText>
         <h2 className="text-4xl sm:text-5xl font-bold mb-6">
           BACKEND DEVELOPMENT & <br />
           CLOUD SOLUTIONS
@@ -37,8 +43,7 @@ export default function ServicesSection() {
           scalable solutions that drive business growth.
         </SectionSubtitleText>
       </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <SectionContent className=" md:grid-cols-3 max-w-7xl mx-auto">
         {services.map((service, index) => (
           <ServiceCard
             key={index}
@@ -47,7 +52,32 @@ export default function ServicesSection() {
             description={service.description}
           />
         ))}
-      </div>
-    </section>
+      </SectionContent>
+    </Section>
+    // <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    //   <div className="max-w-7xl mx-auto text-center mb-16">
+    //     <div className="text-blue-400 font-medium mb-4">WHAT I DO</div>
+    //     <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+    //       BACKEND DEVELOPMENT & <br />
+    //       CLOUD SOLUTIONS
+    //     </h2>
+    //     <SectionSubtitleText>
+    //       Specializing in building robust backend systems and APIs that power
+    //       modern applications. From database design to deployment, I create
+    //       scalable solutions that drive business growth.
+    //     </SectionSubtitleText>
+    //   </div>
+
+    //   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+    //     {services.map((service, index) => (
+    //       <ServiceCard
+    //         key={index}
+    //         icon={service.icon}
+    //         title={service.title}
+    //         description={service.description}
+    //       />
+    //     ))}
+    //   </div>
+    // </section>
   );
 }

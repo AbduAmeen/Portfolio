@@ -31,20 +31,22 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <Section className="max-w-7xl mx-auto">
-      <SectionCategoryText>FEATURED PROJECTS</SectionCategoryText>
-      <SectionTitle>MY WORK</SectionTitle>
-      <SectionContent className="lg:grid-cols-3">
-        {projects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            title={project.title}
-            description={project.description}
-            skills={project.skills}
-            link={project.link}
-          />
-        ))}
-      </SectionContent>
+    <Section id="projects">
+      <div className="max-w-7xl mx-auto">
+        <SectionCategoryText>FEATURED PROJECTS</SectionCategoryText>
+        <SectionTitle>MY WORK</SectionTitle>
+        <SectionContent className="lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.title}
+              description={project.description}
+              skills={project.skills}
+              link={project.link}
+            />
+          ))}
+        </SectionContent>
+      </div>
     </Section>
   );
 }

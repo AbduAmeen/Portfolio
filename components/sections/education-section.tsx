@@ -24,22 +24,24 @@ export default function EducationSection() {
   ];
 
   return (
-    <Section className="bg-[#060c24] max-w-7xl mx-auto">
-      <SectionCategoryText>EDUCATION</SectionCategoryText>
-      <SectionTitle>ACADEMIC BACKGROUND</SectionTitle>
-      <SectionContent className="lg:grid-cols-2">
-        {educationItems.map((item, index) => (
-          <EducationCard
-            key={index}
-            school={item.school}
-            location={item.location}
-            degree={item.degree}
-            period={item.period}
-            notes={item.notes}
-            coursework={item.coursework}
-          />
-        ))}
-      </SectionContent>
+    <Section className="bg-[#060c24]" id="education">
+      <div className="max-w-7xl mx-auto">
+        <SectionCategoryText>EDUCATION</SectionCategoryText>
+        <SectionTitle>ACADEMIC BACKGROUND</SectionTitle>
+        <SectionContent className="lg:grid-cols-2">
+          {educationItems.map((item, index) => (
+            <EducationCard
+              key={index}
+              school={item.school}
+              location={item.location}
+              degree={item.degree}
+              period={item.period}
+              notes={item.notes}
+              coursework={item.coursework}
+            />
+          ))}
+        </SectionContent>
+      </div>
     </Section>
   );
 }

@@ -1,6 +1,6 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Mail, MapPin } from "lucide-react"
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Mail, MapPin } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -8,16 +8,21 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="text-blue-400 font-medium mb-4">SOFTWARE DEVELOPMENT ENGINEER</div>
+            <div className="text-blue-400 font-medium mb-4">
+              SOFTWARE DEVELOPMENT ENGINEER
+            </div>
             <h1 className="text-5xl sm:text-6xl font-bold mb-6 leading-tight">
               ABD-ALRAHMAN <span className="text-blue-400">AMEEN</span>
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-xl">
-              Experienced backend developer specializing in Java, Kotlin, and cloud technologies. Building scalable
-              solutions at Amazon and contributing to open-source projects.
+              Experienced backend developer specializing in Java, Kotlin, and
+              cloud technologies. Building scalable solutions at Amazon and
+              contributing to open-source projects.
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8">View Projects</Button>
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8">
+                View Projects
+              </Button>
               <Button
                 variant="outline"
                 className="border-blue-600 text-blue-400 hover:bg-blue-900/20 rounded-full px-8"
@@ -52,5 +57,5 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
