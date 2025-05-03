@@ -41,7 +41,7 @@ export default function Navbar() {
             href="#"
             className="text-2xl font-bold text-white flex items-center"
           >
-            <span className="text-blue-400">A.</span>AMEEN
+            <span className="text-blue-400">ABDU</span>AMEEN
           </Link>
 
           {/* Desktop Navigation */}
